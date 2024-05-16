@@ -1,0 +1,24 @@
+{
+  "name": "acme",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/acme/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "acme:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "acme:build:development"
+        },
+        "production": {
+          "buildTarget": "acme:build:production"
+        }
+      }
+    }
+  }
+}
