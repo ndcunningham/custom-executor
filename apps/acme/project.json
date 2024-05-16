@@ -19,6 +19,12 @@
           "buildTarget": "acme:build:production"
         }
       }
+    },
+    "echo": {
+      "executor": "@acme/my-plugin:echo",
+      "options": {
+        "project": "acme"
+      }
     }
   }
 }
